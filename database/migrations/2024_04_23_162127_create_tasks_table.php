@@ -15,7 +15,7 @@ return new class extends Migration {
             $table->string('title', 300);
             $table->string('description', 2000);
             $table->foreignId('user_id')->constrained();     //admin
-            $table->foreignId('assigned_to')->constrained()->references('id')->on('users'); //which user?
+            $table->foreignId('assigned_to')->nullable()->constrained()->references('id')->on('users'); //which user?
             $table->foreignId('status_id')->default('2')->constrained();
             $table->timestamps();
         });
