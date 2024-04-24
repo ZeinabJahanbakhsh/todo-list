@@ -3,6 +3,9 @@
 namespace App\Exceptions;
 
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Illuminate\Http\JsonResponse;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Http\Response;
 use Throwable;
 
 class Handler extends ExceptionHandler
@@ -27,4 +30,13 @@ class Handler extends ExceptionHandler
             return $e->getMessage();
         });
     }
+
+    public function render($request, Throwable $e): Response|JsonResponse|RedirectResponse
+    {
+        return response()->json([
+            'message' => "Invalid request!",
+            'data'    => $e->getMessage()
+        ], 404);
+    }
+
 }
