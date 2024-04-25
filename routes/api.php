@@ -18,6 +18,6 @@ Route::prefix('dashboard/admin')->middleware(['auth:sanctum', 'is.admin'])->grou
 
     Route::resource('tasks', TaskController::class)->except('edit', 'create');
 
-    Route::post('/{task}/change-status', [ChangeStatusController::class, 'changeStatus']);
+    Route::post('tasks/{task}/change-status', [ChangeStatusController::class, 'changeStatus']);
 
 });

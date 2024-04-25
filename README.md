@@ -8,7 +8,7 @@
 </p>
 
 ## Show postman
-- [Look at the export api ](https://www.postman.com/blue-crater-7468/workspace/todo-list/collection/10148903-35f9e8f0-fc63-46d0-a5bd-5eff455ac7e1?action=share&source=copy-link&creator=10148903).
+[Look at the export api ](https://www.postman.com/blue-crater-7468/workspace/todo-list/collection/10148903-35f9e8f0-fc63-46d0-a5bd-5eff455ac7e1?action=share&source=copy-link&creator=10148903)
 
 ## License
 
