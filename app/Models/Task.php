@@ -14,6 +14,8 @@ class Task extends Model
     protected $fillable = [
         'title',
         'description',
+        'user_id',
+        'status_id',
     ];
 
     protected $casts = [

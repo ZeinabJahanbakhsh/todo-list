@@ -33,9 +33,9 @@ class DatabaseSeeder extends Seeder
             StatusSeeder::class,
         ]);
 
-        User::factory(10)->create();
+       /* User::factory(10)->create();
         PermissionUser::factory(10)->create();
-        Task::factory(10)->create();
+        Task::factory(10)->create();*/
 
         \Schema::enableForeignKeyConstraints();
     }

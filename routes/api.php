@@ -14,9 +14,9 @@ Route::post('/register', [RegisterController::class, 'register']);
 Route::post('/login', [LoginController::class, 'login']);
 
 
-Route::prefix('dashboard/admin/tasks')->middleware(['auth:sanctum', 'is.admin'])->group(function () {
+Route::prefix('dashboard/admin')->middleware(['auth:sanctum', 'is.admin'])->group(function () {
 
-    Route::resource('', TaskController::class)->except('edit', 'create');
+    Route::resource('tasks', TaskController::class)->except('edit', 'create');
 
     Route::post('/{task}/change-status', [ChangeStatusController::class, 'changeStatus']);
 
